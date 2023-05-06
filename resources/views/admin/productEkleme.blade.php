@@ -77,13 +77,19 @@
 <body>
     <main class="main users chart-page" id="skip-target">
         <div class="container">
+            @if(session()->has('message'))
+            <div class="alert alert-success">
+                {{session()->get('message')}}
+            </div>
+            @endif
             <h2 class="main-title">Dashboard</h2>
             <div class="">
                 <div class="">
                     <h1>Ürün Bilgileri</h1>
-                    <form method="POST" action="/submit">
+                    <form action="{{url('addproduct')}}" method="post" enctype="multipart/form-data">
+                        @csrf
                         <label for="product-title">Ürün Başlığı:</label>
-                        <input type="text" id="product-title" name="product-title" required><br><br>
+                        <input type="text" id="product-title" name="title" required><br><br>
 
                         <label for="price">Fiyatı:</label>
                         <input type="number" id="price" name="price" required><br><br>
@@ -95,7 +101,7 @@
                         <input type="number" id="quantity" name="quantity" required><br><br>
 
                         <label for="photo">Fotoğraf:</label>
-                        <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
+                        <input type="file" id="photo" name="image" accept="image/*" required><br><br>
 
                         <input type="submit" value="Gönder">
                     </form>

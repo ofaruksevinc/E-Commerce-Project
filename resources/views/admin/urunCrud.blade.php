@@ -49,15 +49,17 @@
         </tr>
     </thead>
     <tbody>
+    @foreach ($products as $product)
         <tr>
-            <td><img src="[Fotoğrafın bağlantısı veya dosya adı]" alt="Ürün Fotoğrafı" style="max-width: 100px;"></td>
-            <td>[Ürünün fiyatı]</td>
-            <td>[Ürünün açıklaması]</td>
-            <td>[Ürünün miktarı]</td>
+            <td><img src="/productimage/{{ $product->image }}" alt="Ürün Fotoğrafı" style="max-width: 100px;"></td>
+            <td>{{ $product->price }}</td>
+            <td>{{ $product->description }}</td>
+            <td>{{ $product->quantity }}</td>
             <td>
                 <button class="edit-button">Düzenle</button>
                 <button class="delete-button">Sil</button>
             </td>
         </tr>
+    @endforeach
     </tbody>
 </table>
