@@ -29,7 +29,6 @@ route::get('/redirect', [HomeController::class,'redirect']);
 route::get('/', [HomeController::class,'index']);
 route::get('/home', [AdminController::class,'home']);
 route::get('/product',[AdminController::class,'product']);
-route::get('/updateproduct',[AdminController::class,'updateproduct']);
+route::get('/allproduct',[AdminController::class,'allproduct']);
 route::get('/order',[AdminController::class,'order']);
 route::post('/addproduct',[AdminController::class, 'addproduct']);
-route::get('/uppdateproduct', [AdminController::class, 'index']);

@@ -13,7 +13,7 @@ class AdminController extends Controller
     public function product(){
         return view('admin.product');
     }
-    public function updateproduct()
+    public function allproduct()
 {
     $products = Product::all();
 
