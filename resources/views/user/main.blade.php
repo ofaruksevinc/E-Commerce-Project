@@ -5,7 +5,7 @@
                     <div class="header-text">
                         <h6>Arif Hali & Kilim Travel</h6>
                         <h2>Dünya trendlerini &amp; Yakından takip edin.</h2>
-                        <p>LArif Işık, her türlü hali, kilim, travel.</p>
+                        <p>Arif Işık, her türlü hali, kilim, travel.</p>
                         <div class="buttons">
                             <div class="border-button">
                                 <a href="explore.html">Ürünlere Ulaşmak İçin Tıklayınız</a>

@@ -4,17 +4,18 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a style="margin: 17px !IMPORTANT;" href="index.html" class="logo">
+                        <a style="margin: 17px !IMPORTANT;" href="{{url('')}}" class="logo">
                             <img src="assets/images/logo.png" alt="">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="index.html" class="active">Ana Sayfa</a></li>
-                            <li><a href="explore.html">Ürünler</a></li>
+                            <li><a href="{{url('/')}}" class="active">Ana Sayfa</a></li>
+                            <li><a href="{{url('/allproduct')}}">Ürünler</a></li>
                             <li> @if (Route::has('login'))
                                     @auth
-                                    <li><a href="details.html">Sepet</a></li>
+                                    <li class="nav-item"><a href="{{url('orders')}}">Siparişlerim</a></li>
+                            <li class="nav-item"><a href="{{url('showcart')}}"><i class="fas fa-shopping-cart "></i> Sepet[{{$count}}]</a></li>
                                     <x-app-layout>
 
                                     </x-app-layout>

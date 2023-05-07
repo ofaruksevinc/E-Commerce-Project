@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\order;
 
 class AdminController extends Controller
 {
@@ -15,7 +16,7 @@ class AdminController extends Controller
     {
         return view('admin.product');
     }
-    public function allproduct()
+    public function allproducts()
     {
         $products = Product::all();
 
@@ -24,7 +25,8 @@ class AdminController extends Controller
 
     public function order()
     {
-        return view('admin.order');
+        $order = order::where('order_status',null)->get();
+        return view('admin.order', compact('order'));
     }
     public function addproduct(Request $request)
     {
@@ -66,5 +68,21 @@ class AdminController extends Controller
         $data->save();
         
         return view('admin.updateProduct', compact('data'));
+    }
+    public function orderconfirm($id)
+    {
+        $order = order::find($id);
+        $order->status = "Teslim Edildi";
+        $order->order_status = true;
+        $order->save();
+        return redirect()->back();
+    }
+    public function ordercancel($id)
+    {
+        $order = order::find($id);
+        $order->status = "Sipariş İptal Edildi";
+        $order->order_status = false;
+        $order->save();
+        return redirect()->back();
     }
 }
