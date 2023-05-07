@@ -96,4 +96,16 @@ class HomeController extends Controller
         DB::table('carts')->where('phone', $phone)->delete();
         return redirect()->back()->with('message', 'Sipraişiniz Alındı. İyi Günler Dileriz :)');
     }
+    public function orders()
+    {
+        $user = auth()->user();
+        $order = order::where('phone', $user->phone)->get();
+        $cart = cart::where('phone', $user->phone)->get();
+        $count = cart::where('phone', $user->phone)->count();
+        $total = 0;
+        foreach ($cart as $price) {
+            $total += $price->price;
+        }
+        return view('user.orders', compact('order', 'count','total'));
+    }
 }

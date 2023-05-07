@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Routing\RouteUri;
+use Termwind\Components\Hr;
 
 Route::middleware([
     'auth:sanctum',
@@ -31,3 +32,4 @@ route::get('/showcart',[HomeController::class, 'cart']);
 route::get('/confirmorder',[HomeController::class, 'confirmorder']);
 route::get('/orderconfirm/{id}',[AdminController::class, 'orderconfirm']);
 route::get('/ordercancel/{id}',[AdminController::class, 'ordercancel']);
+route::get('/orders',[HomeController::class, 'orders']);

@@ -58,7 +58,7 @@ https://templatemo.com/tm-577-liberty-market
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li><a href="{{url('')}}">Ana Sayfa</a></li>
-                            <li><a href="{{url('')}}">Siparişlerim</a></li>
+                            <li><a href="{{url('/orders')}}">Siparişlerim</a></li>
 
                         </ul>
                         <!-- ***** Menu End ***** -->
@@ -162,11 +162,12 @@ https://templatemo.com/tm-577-liberty-market
                                             </span>
                                         </h4>
                                         @foreach($cart as $item)
-                                        <p>{{$item->product_title}} <input class="text-white" type="text" name="productname[]" value="{{$item->title}}" hidden><span class="price">${{$item->price}} <input type="text" name="price[]" value="{{$item->price}}" hidden></span></p>
+                                        <p>{{$item->product_title}} <input class="text-white" type="text" name="productname[]" value="{{$item->product_title}}" hidden><span class="price">${{$item->price}} <input type="text" name="price[]" value="{{$item->price}}" hidden></span></p>
+                                        <input class="text-white" type="text" name="quantity[]" value="{{$item->quantity}}" hidden>
                                         <hr>
                                         @endforeach
                                         <p>Toplam <span class="price" style="color:white"><b>${{$total}}</b></span></p>
-                                        <input type="submit" value="Öde" class="btn">
+                                        <button type="submit" value="Öde" class="btn">Öde</button>
                                     </form>
                                 </div>
                             </div>
