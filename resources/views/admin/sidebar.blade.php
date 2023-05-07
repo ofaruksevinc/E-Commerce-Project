@@ -7,7 +7,7 @@
             <a href="{{url('product')}}"><span class="icon document" aria-hidden="true"></span>Ürün ekle</a>
         </li>
         <li>
-            <a href="{{url('allproducts')}}">
+            <a href="{{url('allproduct')}}">
                 <span class="icon folder" aria-hidden="true"></span>Ürünler
             </a>
         </li>

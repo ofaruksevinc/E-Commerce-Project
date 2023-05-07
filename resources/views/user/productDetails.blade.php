@@ -58,8 +58,8 @@ https://templatemo.com/tm-577-liberty-market
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Tüm Ürünler</a></li>
+              <li><a href="{{url('')}}">Ana Sayfa</a></li>
+              <li><a href="{{url('allproduct')}}">Tüm Ürünler</a></li>
               <li class="nav-item"><a href="{{url('showcart')}}"><i class="fas fa-shopping-cart "></i> Sepet[{{$count}}]</a></li>
             </ul>
             <a class='menu-trigger'>
