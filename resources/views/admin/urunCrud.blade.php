@@ -56,8 +56,8 @@
             <td>{{ $product->description }}</td>
             <td>{{ $product->quantity }}</td>
             <td>
-                <button class="edit-button">Düzenle</button>
-                <button class="delete-button">Sil</button>
+                <button class="edit-button"><a href="{{url('updateproductview', $product->id)}}">Güncelle</a></button>
+                <button class="delete-button"><a href="{{url('deleteproduct', $product->id)}}">Sil</a></button>
             </td>
         </tr>
     @endforeach

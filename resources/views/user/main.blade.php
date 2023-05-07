@@ -3,15 +3,12 @@
             <div class="row">
                 <div class="col-lg-6 align-self-center">
                     <div class="header-text">
-                        <h6>Liberty NFT Market</h6>
-                        <h2>Create, Sell &amp; Collect Top NFT’s.</h2>
-                        <p>Liberty NFT Market is a really cool and professional design for your NFT websites. This HTML CSS template is based on Bootstrap v5 and it is designed for NFT related web portals. Liberty can be freely downloaded from TemplateMo's free css templates.</p>
+                        <h6>Arif Hali & Kilim Travel</h6>
+                        <h2>Dünya trendlerini &amp; Yakından takip edin.</h2>
+                        <p>LArif Işık, her türlü hali, kilim, travel.</p>
                         <div class="buttons">
                             <div class="border-button">
-                                <a href="explore.html">Explore Top NFTs</a>
-                            </div>
-                            <div class="main-button">
-                                <a href="https://youtube.com/templatemo" target="_blank">Watch Our Videos</a>
+                                <a href="explore.html">Ürünlere Ulaşmak İçin Tıklayınız</a>
                             </div>
                         </div>
                     </div>
